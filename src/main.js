@@ -20,11 +20,9 @@ Vue.use(ElementUI);
 //  * Vue.use(Button)
 //  * Vue.use(Select)
 
-
-
 // Vue.use(Element, { size: "small", zIndex: 3000 });
 
-Vue.prototype.$axios = axios  ;
+Vue.prototype.$axios = axios  ; //挂在全局原始axios
 
 
 Vue.config.productionTip = false

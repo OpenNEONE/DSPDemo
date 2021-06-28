@@ -18,7 +18,7 @@ module.exports = {
 		host: "localhost",
 		port: 8080, // 端口号
 		https: false, // https:{type:Boolean}
-		open: false, //配置后自动启动浏览器
+		open: true, //配置后自动启动浏览器
 		hotOnly: true, // 热更新
 		// 配置跨域处理
 		proxy: {
