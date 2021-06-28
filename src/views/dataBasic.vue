@@ -4,8 +4,8 @@
       <el-col :span="12"
         ><div class="grid-content bg-purple-dark">
           <el-container width="200px">
-            <el-header><Steps/></el-header>
-            <el-main>
+            <el-header><Steps /></el-header>
+            <el-main @click="getList()">
               <el-form ref="form" :model="form" label-width="80px">
                 <el-form-item label="活动名称">
                   <el-input v-model="form.name"></el-input>
@@ -74,11 +74,15 @@
 </template>
 
 <script>
-import Steps from '../components/Steps.vue'
+import Steps from "../components/Steps.vue";
+import { getListAPI } from "../api";
 export default {
-  name:"dataBasic",
-  components:{
-    Steps
+  name: "dataBasic",
+  components: {
+    Steps,
+  },
+  created() {
+    this.getListAPI()
   },
   data() {
     return {
@@ -95,6 +99,11 @@ export default {
     };
   },
   methods: {
+    getListAPI() {
+      getListAPI('123')
+        .then((res) => console.log('123'))
+        .catch((err) => console.log('456'));
+    },
     onSubmit() {
       console.log("submit!");
     },

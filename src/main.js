@@ -3,7 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import "element-ui/lib/theme-chalk/index.css";
-
+import axios from 'axios'
 //elementUI组件
 import ElementUI from "element-ui";
 Vue.use(ElementUI);
@@ -24,6 +24,7 @@ Vue.use(ElementUI);
 
 // Vue.use(Element, { size: "small", zIndex: 3000 });
 
+Vue.prototype.$axios = axios  ;
 
 
 Vue.config.productionTip = false
